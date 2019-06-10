@@ -159,6 +159,7 @@ class NavigationState extends BaseWidgetState<NavigationPage> {
           ? null
           : FloatingActionButton(
           child: Icon(Icons.arrow_upward),
+          backgroundColor: Colors.green,
           onPressed: () {
             //返回到顶部时执行动画
             _scrollController.animateTo(.0,

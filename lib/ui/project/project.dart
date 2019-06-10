@@ -89,7 +89,7 @@ class ProjectPageState extends BaseWidgetState<ProjectPage>
         body: Column(
           children: <Widget>[
             Container(
-              color: themeColor,
+              color: Colors.green,
               height: 48,
               child: TabBar(
                 indicatorColor: Colors.white,
@@ -210,6 +210,7 @@ class _ProjectListState extends State<ProjectList> {
       ),
       floatingActionButton: !showToTopBtn ? null : FloatingActionButton(
           child: Icon(Icons.arrow_upward),
+          backgroundColor: Colors.green,
           onPressed: () {
             //返回到顶部时执行动画
             _scrollController.animateTo(.0,

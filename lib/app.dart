@@ -39,6 +39,7 @@ class AppState extends State<App> {
         drawer: DrawerPage(),
         appBar: AppBar(
           title: new Text(appBarTitles[_selectedIndex]),
+          backgroundColor: Colors.green,
           bottom: null,
           elevation: 0,
           actions: <Widget>[
@@ -52,7 +53,7 @@ class AppState extends State<App> {
                 })
           ],
         ),
-        body: new IndexedStack(children: pages, index: _selectedIndex),
+        body: new IndexedStack(children: pages, index: _selectedIndex,),
         //底部导航按钮 包含图标及文本
         bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[

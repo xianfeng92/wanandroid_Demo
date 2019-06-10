@@ -159,7 +159,7 @@ class KnowledgePageState extends BaseWidgetState<KnowledgePage> {
           separatorBuilder: (BuildContext context, int index) {
             return Container(
               height: 0.5,
-              color: Colors.black26,
+              color: Colors.black,
             );
           },
           itemCount: _datas.length,

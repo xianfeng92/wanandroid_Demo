@@ -124,7 +124,7 @@ class HomePageState extends BaseWidgetState<HomePage> {
             separatorBuilder: (BuildContext context, int index) {
               return Container(
                 height: 0.5,
-                color: Colors.black26,
+                color: Colors.black,
               );
             },
             controller: _scrollController,
@@ -135,10 +135,11 @@ class HomePageState extends BaseWidgetState<HomePage> {
           ? null
           : FloatingActionButton(
           child: Icon(Icons.arrow_upward),
+          backgroundColor: Colors.green,
           onPressed: () {
             //返回到顶部时执行动画
-            _scrollController.animateTo(.0,
-                duration: Duration(milliseconds: 200), curve: Curves.ease);
+            _scrollController.animateTo(0,
+                duration: Duration(milliseconds: 200), curve: Curves.easeInOutBack);
           }),
     );
   }
@@ -164,19 +165,19 @@ class HomePageState extends BaseWidgetState<HomePage> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.white,
+              color: Colors.white12,
               padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
               child: Row(
                 children: <Widget>[
                   Text(
                     _datas[index - 1].author,
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 14),
                     textAlign: TextAlign.left,
                   ),
                   Expanded(
                     child: Text(
                       _datas[index - 1].niceDate,
-                      style: TextStyle(fontSize: 12),
+                      style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.right,
                     ),
                   ),
@@ -184,7 +185,7 @@ class HomePageState extends BaseWidgetState<HomePage> {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.white12,
               padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
               child: Row(
                 children: <Widget>[
@@ -193,7 +194,7 @@ class HomePageState extends BaseWidgetState<HomePage> {
                       _datas[index - 1].title,
                       maxLines: 2,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF3D4E5F),
                       ),
@@ -204,14 +205,14 @@ class HomePageState extends BaseWidgetState<HomePage> {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.white12,
               padding: EdgeInsets.fromLTRB(16, 8, 16, 16),
               child: Row(
                 children: <Widget>[
                   Expanded(
                     child: Text(
                       _datas[index - 1].superChapterName,
-                      style: TextStyle(fontSize: 12),
+                      style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.left,
                     ),
                   )

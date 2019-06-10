@@ -86,7 +86,7 @@ class PubliccPageState extends BaseWidgetState<PubliccPage>
         body: Column(
       children: <Widget>[
         Container(
-          color: themeColor,
+          color: Colors.green,
           height: 48,
           child: TabBar(
             indicatorColor: Colors.white,
